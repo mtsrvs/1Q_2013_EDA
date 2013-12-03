@@ -1,0 +1,44 @@
+<project
+    name="TPEEDAA"
+    basedir="."
+    default="dist" >
+
+    <!-- Compila el proyecto, deja los archivos class en el directorio bin -->
+
+    <target name="compile" >
+
+        <mkdir dir="bin" />
+
+        <javac
+            classpath="lib/junit-4.7.jar"
+            destdir="bin"
+            includeAntRuntime="false"
+            srcdir="src" />
+    </target>
+
+    <!-- Crea el jar ejecutable con todo el proyecto compilado. -->
+
+    <target name="dist">
+        <jar
+            basedir="bin"
+            destfile="HyperGraph.jar" >
+
+            <manifest>
+
+                <attribute
+                    name="Main-Class"
+                    value="Graph.Main" />
+            </manifest>
+        </jar>
+    </target>
+
+    <!-- Borra todos los archivos generados luego de compilar. -->
+
+    <target name="clean" >
+
+        <delete dir="bin" />
+
+        <delete file="sample.jar" />
+    </target>
+
+</project>

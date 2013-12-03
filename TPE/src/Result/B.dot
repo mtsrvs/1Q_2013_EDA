@@ -1,0 +1,34 @@
+digraph G { 
+D [shape=box]; 
+node_A -> D; 
+D -> node_G; 
+D -> node_H; 
+I [shape=box]; 
+node_E -> I; 
+node_F -> I; 
+node_G -> I; 
+I -> node_K; 
+J [shape=box]; 
+node_G -> J; 
+node_H -> J; 
+J -> node_K; 
+B [shape=box]; 
+node_A -> B; 
+B -> node_E; 
+B -> node_F; 
+C [shape=box]; 
+node_A -> C; 
+C -> node_F; 
+C -> node_G; 
+D [label="D(3)"]; 
+ I [label="I(1)"]; 
+ J [label="J(8)"]; 
+ B [label="B(4)"]; 
+ C [label="C(2)"]; 
+ node_G [label="G"]; 
+ node_H [label="H"]; 
+ node_A [label="A"]; 
+ node_K [label="K"]; 
+ node_E [label="E"]; 
+ node_F [label="F"]; 
+ }
